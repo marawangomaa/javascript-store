@@ -1,0 +1,93 @@
+.login-page {
+  padding-top: 80px;
+  background: linear-gradient(90deg, #cccccc, #717fe0);
+  background-size: 300% 300%;
+  animation: gradientAnimation 5s infinite linear;
+  height: 100vh;
+  width: 100%;
+}
+.login-page .login-container {
+  margin: 50px auto;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.login-page .login-container .row {
+  display: flex;
+}
+.login-page .login-container .form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-page .login-container .form h2 {
+  padding-bottom: 50px;
+}
+.login-page .login-container .form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+.login-page .login-container .form form span:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.login-page .login-container .form form span:nth-child(3) {
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  cursor: pointer;
+}
+.login-page .login-container .form form input {
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.login-page .login-container .form form button {
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.login-page .login-container .form form button:hover{
+  background-color: transparent;
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+.login-page .login-container .form form p {
+  text-align: center;
+  padding-top: 20px;
+}
+.login-page .login-container .form form p a {
+  padding-left: 5px;
+}
+.login-page .login-container .image {
+  width: 50%;
+  padding: 20px;
+}
+.login-page .login-container .image img {
+  width: 100%;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

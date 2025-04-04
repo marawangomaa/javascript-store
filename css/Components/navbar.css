@@ -1,0 +1,30 @@
+nav{
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    color: var(--light);
+    padding: 10px;
+    font-size: 12px;
+}
+nav .posts{
+    padding: 0 20px;
+    margin: 0 10px;
+}
+nav .links{
+    padding: 0 40px 0 0;
+}
+nav .links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .links ul li{
+    padding: 0 20px;
+    border-left: 1px solid var(--light);
+    border-right: 1px solid var(--light);
+}
+nav .links ul li:hover{
+    cursor: pointer;
+    color: var(--main);
+    transition: all 0.3s ease-in-out;
+}

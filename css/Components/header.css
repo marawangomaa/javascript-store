@@ -1,0 +1,80 @@
+header{
+    display: flex;
+    margin-top: 50px;
+    padding: 25px;
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+}
+.fixed {
+    margin-top: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+header .logo{
+    margin: 0 10px;
+}
+header .logo h2{
+    font-size: 20px;
+}
+header .logo h2 span{
+    font-weight: 400;
+    margin-left: 5px;
+}
+header .logo h2:hover span{
+    color: var(--main);
+    transition: all 0.3s ease-in-out;
+}
+header .menu{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-left: 40px;
+}
+header .menu ul{
+    display: flex;
+}
+header .menu ul li{
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+header .menu ul li a{
+    position: relative;
+    color: var(--light-black);
+    transition: 0.3s ease-in-out;
+}
+header .menu ul li a:hover{
+    color: var(--main);
+}
+header .menu ul li a .badge{
+    background-color: #ff4d6d;
+    padding: 2px 5px;
+    font-size: 10px;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+}
+header .icons{
+    display: flex;
+    justify-content: end;
+    margin: 5px 20px;
+}
+header .icons a{
+    transition: all 0.3s ease-in-out;
+}
+header .icons a:hover{
+    color: var(--main);
+}
+header .icons a svg{
+    margin: 0 15px;
+    width: 18px;
+} 

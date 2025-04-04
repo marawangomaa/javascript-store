@@ -1,0 +1,49 @@
+.profile-page{
+    padding-top: 80px;
+}
+.profile-page .profile-title{
+    text-align: center;
+    padding: 20px;
+}
+.profile-page .profile-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.profile-page .profile-container form input{
+    padding: 15px;
+    width: 90%;
+    border-radius: 20px;
+    border: 1px solid var(--black);
+}
+.profile-page .profile-container form button {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 90%;
+    transition: all 0.3s ease-in-out;
+}
+.profile-page .profile-container form #update{
+    color: white;
+    background-color: var(--black);
+    border: 1px solid transparent;
+}
+.profile-page .profile-container form #update:hover{
+    color: var(--black);
+    background-color: unset;
+    border: 1px solid var(--black);
+}
+.profile-page .profile-container form #signout{
+    color: white;
+    background-color: red;
+    border: 1px solid transparent;
+}
+.profile-page .profile-container form #signout:hover{
+    color: red;
+    border: 1px solid red;
+    background-color: unset;
+
+}

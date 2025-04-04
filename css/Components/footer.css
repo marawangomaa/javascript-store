@@ -1,0 +1,105 @@
+footer{
+    background-color: var(--black);
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+footer .container h2{
+    padding: 20px 10px;
+    color: var(--white);
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+footer .container ul{
+    padding: 20px 10px;
+}
+footer .container ul li{
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--light);
+    transition: all 0.3s ease-in-out;
+}
+footer .container ul li:hover{
+    color: var(--main);
+}
+footer .container .categories{
+    padding: 10px;
+    width: 25%;
+}
+footer .container .help{
+    padding: 10px;
+    width: 25%;
+}
+footer .container .contact{
+    width: 25%;
+    padding-left: 50px;
+    margin-bottom: 80px;
+}
+
+footer .container .contact h2{
+    padding: 20px 10px 20px 0;
+}
+footer .container .contact p{
+    color: var(--light);
+    line-height: 2;
+    font-size: 12px;
+}
+footer .container .contact .icons{
+    padding: 10px 0;
+}
+footer .container .contact .icons i{
+    padding: 0 5px 0 0;
+    color: var(--light);
+    cursor: pointer;
+}
+footer .container .newsLetter{
+    width: 25%;
+    padding-left: 20px;
+    margin-bottom: 80px;
+}
+footer .container .newsLetter h2{
+    padding: 20px 10px 20px 0;
+}
+footer .container .newsLetter input{
+    background-color: transparent;
+    padding: 10px 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--main);
+} 
+footer .container .newsLetter button{
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    width: 50%;
+    background-color: var(--main);
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+footer .container .newsLetter button:hover{
+    background-color: var(--white);
+    color: var(--main);
+}
+footer .svgs{
+    text-align: center;
+    color: var(--light)
+}
+footer .svgs span i{
+    width: 20px;
+    margin: 0 5px; 
+    font-size: 24px;
+    cursor: pointer;
+}
+footer .copyright{
+    padding: 20px;
+    color: var(--light);
+    text-align: center;
+    font-size: 14px;
+}

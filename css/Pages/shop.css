@@ -1,0 +1,207 @@
+.shop-page .shop-products {
+  width: 95%;
+  margin: 100px auto;
+}
+.shop-page .shop-products h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.shop-page .shop-products .productsnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop-page .shop-products .productsnav .productslinks {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.shop-page .shop-products .productsnav .productslinks div.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.shop-page .shop-products .productsnav .productslinks div {
+  cursor: pointer;
+  position: relative;
+}
+.shop-page .shop-products .productsnav .productslinks div.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--black);
+}
+.shop-page .shop-products .productsnav .filters .btn2 {
+  background-color: white;
+  color: var(--light-black);
+  padding: 10px 40px;
+  margin-inline: 10px;
+  border: 1px solid rgb(189, 189, 189);
+  transition: all 0.3s ease;
+}
+.shop-page .shop-products .productsnav .filters .btn2:hover {
+  background-color: var(--main);
+  color: white;
+}
+.shop-page .shop-products .productsnav .filters i {
+  width: 16px;
+  margin: 0 5px;
+  padding: 1px;
+}
+
+.shop-page .searcharea {
+  width: 100%;
+  max-height: 70px;
+  margin-block: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: white;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+.shop-page .searcharea i {
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  color: var(--black);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.shop-page .hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  max-height: 0;
+}
+
+.shop-page .shop-products .psearch {
+  border: 1px solid rgb(221, 218, 218);
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+  background-color: white;
+  color: var(--black);
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.shop-page .shop-products .psearch:hover,
+.shop-page .shop-products .psearch:focus {
+  border-color: var(--main);
+}
+
+.shop-page .shop-products .searcharea svg {
+  position: absolute;
+  right: 20px;
+  color: var(--black);
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.shop-page .shop-products .psearch:hover + svg,
+.shop-page .shop-products .psearch:focus + svg {
+  color: var(--main);
+  width: 10px;
+}
+.shop-page .shop-products .productscards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-block: 50px;
+  gap: 30px;
+}
+
+.shop-page .shop-products .productscards .pcard {
+  width: 23%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.shop-page .shop-products .productscards .pcard .imginner {
+  overflow: hidden;
+  position: relative;
+}
+.shop-page .shop-products .productscards .pcard .imginner img {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.shop-page .shop-products .productscards .pcard .imginner img:hover {
+  transform: scale(1.1);
+}
+.shop-page .shop-products .productscards .pcard .imginner button {
+  position: absolute;
+  left: 30%;
+  bottom: -50%;
+  border-style: none;
+  border-radius: 20px;
+  padding: 7px 20px;
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: large;
+}
+.shop-page .shop-products .productscards .pcard .imginner button:hover {
+  background-color: black;
+  color: white;
+}
+.shop-page .shop-products .productscards .pcard .pcardh {
+  color: var(--light-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop-page .shop-products .productscards .pcard:hover .pbtn {
+  bottom: 10%;
+}
+.shop-page .shop-products .productscards .pcard .pbtn {
+  position: absolute;
+  left: 30%;
+  bottom: -50%;
+  border-style: none;
+  border-radius: 20px;
+  padding: 7px 20px;
+  background-color: white;
+  color: black;
+  transition: all 0.4s;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: large;
+}
+.shop-page .shop-products .productscards .pcard .pbtn:hover {
+  background-color: black;
+  color: white;
+}
+.shop-page .shop-products .productscards .pcard .pcardh p {
+  transition: all 0.3s ease;
+}
+.shop-page .shop-products .productscards .pcard .pcardh p:hover {
+  color: var(--main);
+  cursor: pointer;
+}
+.shop-page .shop-products .productscards .pcard .pcardh span {
+  transition: all 0.3s ease;
+}
+.shop-page .shop-products .productscards .pcard .pcardh span:hover {
+  cursor: pointer;
+  color: var(--main);
+}
+
+.shop-page .shop-products .productscards .pcard .price {
+  color: var(--black);
+}

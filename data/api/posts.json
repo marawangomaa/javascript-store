@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "New Post",
+      "description": "New Post Description",
+      "image": "./../../imgs/blog/blog-04.jpg.webp"
+    },
+    {
+      "id": 2,
+      "title": "New Post 2",
+      "description": "New Post Description 2",
+      "image": "./../../imgs/blog/blog-05.jpg"
+    }
+  ]
+}
