@@ -19,27 +19,34 @@ document.getElementById("psearch").addEventListener("input", function () {
   });
 });
 
+const productLinks = document.querySelectorAll(".productslinks div");
 
-const productLinks = document.querySelectorAll('.productslinks div');
+productLinks[0].classList.add("active");
+productLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    productLinks.forEach((item) => item.classList.remove("active"));
 
-productLinks[0].classList.add('active')
-productLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        productLinks.forEach(item => item.classList.remove('active'));
-
-        this.classList.add('active');
-    });
+    this.classList.add("active");
+  });
 });
 
+const allProducts = document.querySelectorAll(".productslinks div");
+
+for (let i = 0; i < allProducts.length; i++) {
+  allProducts[i].addEventListener("click", function () {
+    const category = this.classList[0];
+    catFilter(category);
+  });
+}
 
 function catFilter(cat) {
-  if (cat.toLowerCase() === 'all') {
-    cards.forEach(card => {
+  if (cat.toLowerCase() === "all") {
+    cards.forEach((card) => {
       card.style.display = "block";
     });
   } else {
     const catValue = cat.toLowerCase();
-    cards.forEach(card => {
+    cards.forEach((card) => {
       const cardCategory = card.getAttribute("data-category");
       if (cardCategory && cardCategory.toLowerCase() === catValue) {
         card.style.display = "block";
@@ -50,6 +57,5 @@ function catFilter(cat) {
     });
   }
 }
-catFilter();
 
 export default catFilter();

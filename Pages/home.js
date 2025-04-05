@@ -74,8 +74,8 @@ export default function HomePage() {
             <h2>Products Overview</h2>
         </div>
         <div class="productsnav">
-            <div class="productslinks">
-                <div class="allprouducts">All Prouducts</div>
+            <div  class="productslinks">
+                <div class="all">All Prouducts</div>
                 <div class="women">Women</div>
                 <div class="men">Men</div>
                 <div class="bag">Bags</div>
@@ -95,7 +95,7 @@ export default function HomePage() {
             ${products.map((product) => {
               return ` <div class="pcard" data-category=${product.category}>
                     <div class="imginner">
-                      <img src=${product.image} alt="product">
+                      <img src=${product.images} alt="product">
                       <button class="pbtn">Quick view</button>
                     </div>
                     <div class="pcardh">
