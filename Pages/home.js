@@ -99,7 +99,7 @@ export default function HomePage() {
                       <button class="pbtn">Quick view</button>
                     </div>
                     <div class="pcardh">
-                    <p>${product.name}</p>
+                    <p>${product.title}</p>
                     <span id="wishlist">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
