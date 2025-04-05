@@ -15,13 +15,14 @@ export default function BlogPage() {
         <section class="blog-title">
           <h2>Blog</h2>
         </section>
+
         <section class="blog-container">
         <div class="blog-posts">
           ${posts.map((post) => {
-            return `
+    return `
               <div class="blog-post">
               <div class="post-header">
-                <a href="#" class="post-image-link">
+                <a href="#/post/${post.id}" class="post-image-link">
                   <div class="date-badge">
                     <span class="day">${20 + post.id}</span>
                     <span class="month-year">Jan 2025</span>
@@ -47,7 +48,7 @@ export default function BlogPage() {
               </div>
               </div>
             `;
-          })}
+  })}
           </div>
 
             <div class="sidebar">

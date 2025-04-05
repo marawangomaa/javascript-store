@@ -91,3 +91,22 @@
     background-position: 0% 50%;
   }
 }
+
+@media (max-width: 991px) {
+  .login-page .login-container .row {
+    flex-direction: column;
+  }
+  .login-page .login-container .form {
+    width: 100%;
+  }
+  .login-page .login-container .image {
+    display: none;
+  }
+  .login-page .login-container .form form input {
+    width: 100%;
+  }
+  .login-page .login-container{
+    padding-block: 50px;
+  }
+  
+}

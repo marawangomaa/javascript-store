@@ -4,7 +4,7 @@ let newPost = {};
 let pathParts = window.location.hash.split("/");
 let postId = pathParts[pathParts.length - 1];
 
-fetching("posts")
+fetching("post")
   .then((data) => {
     const posts = data.posts;
     const post = posts.find((post) => post.id == postId);
@@ -30,12 +30,12 @@ export default function PostPage() {
             <div class="post-header">
               <a class="post-image-link">
                 <div class="date-badge">
-                  <span class="day">${newPost ? (20 + newPost.id): " " }</span>
+                  <span class="day">${newPost ? (20 + newPost.id) : " "}</span>
                   <span class="month-year">Jan 2018</span>
                 </div>
                 <img
                   src="${newPost ? newPost.image : " "}"
-                  alt="${newPost ? newPost.title: " "}"
+                  alt="${newPost ? newPost.title : " "}"
                   class="post-image"
                 />
               </a>

@@ -125,3 +125,62 @@
 .post-comment-button:hover {
   background-color: #555;
 }
+
+@media (max-width: 991px) {
+  .post-page {
+    padding-top: 50px;
+  }
+ 
+  .breadcrumb {
+    margin: 15px;
+    font-size: 0.8em;
+  }
+ 
+  .comment-section {
+    padding: 20px;
+  }
+ 
+  .tags-area h3,
+  .leave-comment-area h3 {
+    font-size: 1.1em;
+  }
+ 
+  .tag-link {
+    font-size: 0.8em;
+    padding: 6px 10px;
+  }
+ 
+  .post-comment-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}
+ 
+@media (max-width: 767px) {
+  .post-page {
+    padding-top: 30px;
+  }
+ 
+  .breadcrumb {
+    margin: 10px;
+    font-size: 0.7em;
+  }
+ 
+  .comment-section {
+    padding: 15px;
+  }
+ 
+  .tags-list {
+    gap: 4px;
+  }
+ 
+  .tag-link {
+    font-size: 0.7em;
+    padding: 5px 8px;
+  }
+ 
+  .post-comment-button {
+    padding: 8px 15px;
+    font-size: 0.8em;
+  }
+}

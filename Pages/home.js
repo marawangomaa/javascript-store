@@ -77,7 +77,7 @@ export default function HomePage() {
         </div>
         <div class="productsnav">
             <div  class="productslinks">
-                <div class="all">All Prouducts</div>
+                <div class="all active">All Prouducts</div>
                 <div class="women">Women</div>
                 <div class="men">Men</div>
                 <div class="bag">Bags</div>
