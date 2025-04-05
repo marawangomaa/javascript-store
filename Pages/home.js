@@ -1,5 +1,7 @@
 import fetching from "./../data/index.js";
+
 let products = [];
+
 fetching("products")
   .then((data) => {
     for (var i = 0; i < data.products.length; i++) {
