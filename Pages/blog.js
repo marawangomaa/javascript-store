@@ -15,7 +15,6 @@ export default function BlogPage() {
         <section class="blog-title">
           <h2>Blog</h2>
         </section>
-
         <section class="blog-container">
         <div class="blog-posts">
           ${posts.map((post) => {

@@ -42,8 +42,8 @@ function Navigation() {
 function Routing() {
   let pathname = window.location.hash.replace("#/", "/") || "/home";
 
-  if (pathname === "/") {
-    pathname = "/home";
+  if (pathname === "/" || pathname === "/#" || pathname === "/#/") {
+    pathname = "/#/home";
     window.history.replaceState({}, "", pathname);
   }
 
@@ -66,8 +66,6 @@ function Routing() {
   const match = pathname.match(dynamicRoutePattern);
 
   if (match) {
-    // pathname = "/post"; // Normalize the pathname to /post
-
     rootElement.innerHTML = PostPage();
 
   } else if (routes[pathname]) {
