@@ -38,7 +38,7 @@ export default function ShopPage() {
             ${products.map((product) => {
               return ` <div class="pcard" data-category=${product.category}>
                     <div class="imginner">
-                      <img src=${product.image} alt="product">
+                      <img src=${product.images} alt="product">
                       <button class="pbtn">Quick view</button>
                     </div>
                     <div class="pcardh">
