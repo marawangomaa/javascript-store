@@ -6,4 +6,5 @@ export default function checkLoginStatus() {
     if (!loggedInUser) {
         window.location.href = "/#/login";
     }
+    
 }

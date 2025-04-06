@@ -39,6 +39,7 @@ regBtn.addEventListener("click", function(e) {
   
     window.location.href = "/#/login";
   }
+  
 
   
 });

@@ -10,6 +10,8 @@ barsBtn.addEventListener("click", function () {
   }
 })
 
+
+
 const cards = document.querySelectorAll(".pcard");
 const searchBtn = document.getElementById("searchbtn")
 
@@ -183,6 +185,16 @@ function OpenQuickView() {
   document.getElementsByClassName("quickViewContent")[0].classList.add("popUp");
 }
 
+const clearCard = document.getElementById("clearcard")
+console.log(clearCard);
+
+clearCard.addEventListener("click", function () {
+  localStorage.removeItem("cart")
+  console.log("hi");
+  window.location.href = "/#/features";
+
+})
+
 document.querySelector("#closeQuickViewBTN").addEventListener("click", () => {
   closeQuickView()
 });
@@ -238,5 +250,8 @@ function updateCartCount() {
   }
 }
 updateCartCount();
+
+
+
 
 export default catFilter();

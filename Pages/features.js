@@ -21,7 +21,7 @@ export default function FeaturesPage(){
                     <input placeholder="Enter coupon code" type="text">
                     <button class="checkOutBtn">APPLY COUPON</button>
                 </div>
-                <button class="checkOutBtn">UPDATE CART</button>
+                <button id="clearcard" class="checkOutBtn">Clear CART</button>
             </div>
         </div>
 
