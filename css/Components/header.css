@@ -93,11 +93,28 @@ header .icons a svg {
   background-color: transparent;
   color: var(--light-black);
   width: 3rem;
+  position: relative;
 }
-
+.cartBTN:hover svg{
+  fill: var(--main);
+}
+ 
 .cartBTN svg {
   fill: var(--light-black);
   width: 1rem;
+}
+ 
+.cartBTN .cartCountSpan{
+  background-color: var(--main);
+  padding: 1px 5px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
 }
 
 .sideBareContainer {
@@ -197,6 +214,7 @@ header .icons a svg {
 }
 
 
+
 @media (max-width: 991px) {
   header {
     margin-top: 0;
@@ -233,6 +251,13 @@ header .icons a svg {
   }
   #bars {
     display: block;
+  }
+
+  .cartBTN .cartCountSpan{
+    width: 12px;
+    top: 10px;
+    right: -10px;
+    width: 50%;
   }
 }
 

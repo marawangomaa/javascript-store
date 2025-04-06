@@ -7,9 +7,8 @@ logBtn.addEventListener("click", function(e) {
     
     if (!email || !password) {
         alert("Please enter email and password");
-    }
-    
-    let users = JSON.parse(localStorage.getItem("users")) || [];
+    } else{
+        let users = JSON.parse(localStorage.getItem("users")) || [];
     
     let user = users.find(user => user.email === email && user.password === password);
     
@@ -24,4 +23,7 @@ logBtn.addEventListener("click", function(e) {
     alert("Login successful!");
     
     window.location.href = "/#/profile";
+    }
+    
+    
 });

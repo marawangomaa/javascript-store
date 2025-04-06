@@ -376,6 +376,9 @@
       width: 45%;
       
   }
+  .shop-page .shop-products .productsnav .filters{
+      margin-top: 20px;
+  }
   .shop-page .shop-products .productsnav .filters .btn2{
     margin-left: 0;
   }
@@ -396,6 +399,7 @@
   }
     .shop-page .shop-products .productsnav .filters{
       width: 100%;
+      margin-top: 20px;
   }
     .shop-page .shop-products .productsnav .filters .btn2{
     margin-left: 0;

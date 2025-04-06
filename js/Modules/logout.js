@@ -39,4 +39,7 @@ logoutBtn.addEventListener("click", function (e) {
   alert("Signed out successfully!");
 
   window.location.href = "/#/login";
+
+  localStorage.removeItem("cart");
+ 
 });

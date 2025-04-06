@@ -36,7 +36,7 @@ export default function Header() {
           </svg>
         </a>
         
-        <button class="cartBTN">
+        <a class="cartBTN">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -48,7 +48,7 @@ export default function Header() {
             />
           </svg>
           <span class="cartCountSpan" id="cartCount">0</span>
-        </button>
+        </a>
 
         <a href="#">
           <svg
