@@ -1,0 +1,178 @@
+.checkOutSession {
+    padding: 12rem 6rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.productsDetails {
+    border: 1px solid black;
+}
+
+.cartTotalPrices {
+    padding: 3rem 2rem;
+    border: 1px solid black;
+}
+
+.inTableTitle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inTableBtn {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartTable {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header1  header2 header3 header4"
+        "body1    body2   body3   body4"
+        "footer  footer  footer  footer"
+    ;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    border: 2px solid black;
+    padding: 1rem 2rem;
+    width: 60%;
+}
+
+.cartHeader {
+    display: contents;
+}
+
+.cartHeader div:nth-child(1) {
+    grid-area: header1;
+}
+
+.cartHeader div:nth-child(2) {
+    grid-area: header2;
+}
+
+.cartHeader div:nth-child(3) {
+    grid-area: header3;
+}
+
+.cartHeader div:nth-child(4) {
+    grid-area: header4;
+}
+
+.cartBody {
+    display: contents;
+}
+
+
+.cartBody div:nth-child(1) {
+    grid-area: body1;
+}
+
+.cartBody div:nth-child(2) {
+    grid-area: body2;
+}
+
+.cartBody div:nth-child(3) {
+    grid-area: body3;
+}
+
+.cartBody div:nth-child(4) {
+    grid-area: body4;
+}
+
+.cartFooter {
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.coupon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cartTotalPrices {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    text-align: start;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    width: 40%;
+}
+
+.cartTotalPrices hr {
+    background-color: black;
+    width: 80%;
+    border-radius: 4px;
+}
+
+
+.shippingDetails {
+    display: flex;
+    justify-items: start;
+    text-align: start;
+    gap: 1rem;
+}
+
+.inputDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
+    width: 60%;
+}
+
+.inputDetails .checkOutBtn {
+    align-self: start;
+}
+
+.finalPrice .checkOutBtn {
+    width: 100%;
+}
+
+.finalPrice {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 2rem;
+}
+
+
+.CardContainer {
+    width: 150px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Media Query for Tablet Screens */
+@media (max-width: 991px) {
+    .checkOutSession {
+        flex-direction: column;
+        width: 100%;
+        padding: 12rem 3rem;
+    }
+
+    .cartTable {
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+    
+    .cartTotalPrices {
+        width: 100%;
+    }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 767.98px) {
+    
+}

@@ -18,7 +18,7 @@ export default function ShopPage() {
         </div>
         <div class="productsnav">
             <div class="productslinks">
-                <div class="allprouducts">All Prouducts</div>
+                <div class="all active">All Prouducts</div>
                 <div class="women">Women</div>
                 <div class="men">Men</div>
                 <div class="bag">Bags</div>
@@ -36,13 +36,18 @@ export default function ShopPage() {
         </div>
         <div class="productscards" id="productscards">
             ${products.map((product) => {
-              return ` <div class="pcard" data-category=${product.category}>
+              return ` <div class="pcard" 
+              data-category=${product.category}
+              data-title=${product.title}
+              data-images=${product.images}
+              data-price=${product.price}
+              >
                     <div class="imginner">
                       <img src=${product.images} alt="product">
-                      <button class="pbtn">Quick view</button>
+                      <button id="addToQuickView" class="pbtn">Quick view</button>
                     </div>
                     <div class="pcardh">
-                    <p>${product.name}</p>
+                    <p>${product.title}</p>
                     <span id="wishlist">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +65,7 @@ export default function ShopPage() {
                     </span>
                       </div>
                     <span class="price">$ ${product.price}</span>
+                    <button class="addToCart">Add to Cart</button>
                   </div>
                 `;
             })}

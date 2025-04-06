@@ -35,7 +35,8 @@ export default function Header() {
             />
           </svg>
         </a>
-        <a href="#">
+        
+        <button class="cartBTN">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -46,7 +47,9 @@ export default function Header() {
               d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
             />
           </svg>
-        </a>
+          <span class="cartCountSpan" id="cartCount">0</span>
+        </button>
+
         <a href="#">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +66,25 @@ export default function Header() {
           </a>
         </span>
       </div>
+
+      <div class="sideBareContainer">
+        <div class="sideBare">
+          <div class="CartCaption">
+            <h2>YOUR CART</h2>
+            <button class="cartCloseBtn"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512">
+                <path
+                  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+              </svg></button>
+          </div>
+          <div class="listOfItem" id="cartItems"></div>
+          <div class="sideBareCheckOut">
+            <div class="TotalPrice"></div>
+            <button class="checkOutBtn" onclick="redirectToShop()">CHECK OUT</button>
+          </div>
+        </div>
+      </div>
+
     </header>
   `;
 }
