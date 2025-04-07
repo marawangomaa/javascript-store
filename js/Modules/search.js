@@ -4,16 +4,13 @@ barsBtn.addEventListener("click", function () {
   const menu = document.getElementById("menu");
   if (menu.style.display === "block") {
     menu.style.display = "none";
-  }
-  else {
+  } else {
     menu.style.display = "block";
   }
-})
-
-
+});
 
 const cards = document.querySelectorAll(".pcard");
-const searchBtn = document.getElementById("searchbtn")
+const searchBtn = document.getElementById("searchbtn");
 
 if (searchBtn) {
   searchBtn.addEventListener("click", () => {
@@ -36,7 +33,6 @@ if (searchBtn) {
   });
 }
 
-
 const productLinks = document.querySelectorAll(".productslinks div");
 
 if (productLinks) {
@@ -50,9 +46,7 @@ if (productLinks) {
   });
 } else {
   console.log("none");
-
 }
-
 
 for (let i = 0; i < productLinks.length; i++) {
   productLinks[i].addEventListener("click", function () {
@@ -70,7 +64,6 @@ function catFilter(cat) {
     const catValue = cat.toLowerCase();
     console.log(cards);
     cards.forEach((card) => {
-
       const cardCategory = card.getAttribute("data-category");
 
       if (cardCategory && cardCategory.toLowerCase() === catValue) {
@@ -83,47 +76,42 @@ function catFilter(cat) {
   }
 }
 
+cards.forEach((card) => {
+  const cardCategory = card.getAttribute("data-category");
+  const cardTitle = card.getAttribute("data-title");
+  const cardImages = card.getAttribute("data-images");
+  const cardPrice = card.getAttribute("data-price");
 
+  card.querySelector(".addToCart").addEventListener("click", () => {
+    addToCart(cardTitle, cardImages, cardPrice, cardCategory);
+  });
+});
 cards.forEach((card) => {
-      const cardCategory = card.getAttribute("data-category");
-      const cardTitle = card.getAttribute("data-title");
-      const cardImages = card.getAttribute("data-images");
-      const cardPrice = card.getAttribute("data-price");
-      
-  card.querySelector(".addToCart").addEventListener(
-    "click", () => {
-      addToCart(cardTitle, cardImages, cardPrice, cardCategory);
-    }
-  )
-})
-cards.forEach((card) => {
-      const cardCategory = card.getAttribute("data-category");
-      const cardTitle = card.getAttribute("data-title");
-      const cardImages = card.getAttribute("data-images");
-      const cardPrice = card.getAttribute("data-price");
-      console.log(card.querySelector("#addToQuickView"));
-      console.log(cardCategory);
-      console.log(cardPrice);
-      console.log(cardImages);
-      console.log(cardTitle);
-      
-      
-  card.querySelector("#addToQuickView").addEventListener(
-    "click", () => {
-      OpenQuickView()
-      addToQuickView(cardTitle, cardImages, cardPrice, cardCategory);
-    }
-  )
+  const cardCategory = card.getAttribute("data-category");
+  const cardTitle = card.getAttribute("data-title");
+  const cardImages = card.getAttribute("data-images");
+  const cardPrice = card.getAttribute("data-price");
+  const cardId = card.getAttribute("data-id");
+  console.log(card.querySelector("#addToQuickView"));
+  console.log(cardCategory);
+  console.log(cardPrice);
+  console.log(cardImages);
+  console.log(cardTitle);
+
+  card.querySelector("#addToQuickView").addEventListener("click", () => {
+    OpenQuickView();
+    addToQuickView(cardTitle, cardImages, cardPrice, cardCategory, cardId);
+  });
 });
 
-function addToQuickView(name, image, price, description) {
+function addToQuickView(name, image, price, description , id) {
   const details = document.querySelector(".productDetailsCaption");
   const display = document.querySelector(".itemImageDisplay");
   const selection = document.querySelector(".productSelectionInPop");
 
   if (!details || !display || !selection) {
-      console.error("Quick view DOM elements are missing.");
-      return;
+    console.error("Quick view DOM elements are missing.");
+    return;
   }
 
   details.innerHTML = "";
@@ -133,16 +121,15 @@ function addToQuickView(name, image, price, description) {
   let imageDisplay = document.createElement("div");
   imageDisplay.innerHTML = `
 <img src="${image}"/>
-`
+`;
   let productDetails = document.createElement("div");
   productDetails.innerHTML = `
 <h2>${name}</h2>
 <p>${price}</p>
 <p>${description}</p>
-`
+`;
   let productSelection = document.createElement("div");
-  productSelection.innerHTML =
-      `
+  productSelection.innerHTML = `
 <div>
   <h4>
     Size
@@ -168,71 +155,141 @@ function addToQuickView(name, image, price, description) {
   </select>
 </div>
 <button class="addToCartPopUp checkOutBtn">ADD TO CART</button>
-`
+`;
   let addToCartBTN = productSelection.querySelector(".addToCartPopUp");
   if (addToCartBTN) {
-      addToCartBTN.addEventListener("click", () => {
-          addToCart(name, image, price, "unknown");
-      });
+    addToCartBTN.addEventListener("click", () => {
+      addToCart(name, image, price, "unknown");
+    });
   }
 
-  selection.appendChild(productSelection)
-  details.appendChild(productDetails)
-  display.appendChild(imageDisplay)
+  selection.appendChild(productSelection);
+  details.appendChild(productDetails);
+  display.appendChild(imageDisplay);
 }
 function OpenQuickView() {
   document.getElementsByClassName("quickViewPopUp")[0].classList.add("popUp");
   document.getElementsByClassName("quickViewContent")[0].classList.add("popUp");
 }
 
-const clearCard = document.getElementById("clearcard")
+const clearCard = document.getElementById("clearcard");
 console.log(clearCard);
-
-clearCard.addEventListener("click", function () {
-  localStorage.removeItem("cart")
-  console.log("hi");
-  window.location.href = "/#/features";
-
-})
-
-document.querySelector("#closeQuickViewBTN").addEventListener("click", () => {
-  closeQuickView()
-});
-function closeQuickView() {
-  document.getElementsByClassName("quickViewPopUp")[0].classList.remove("popUp");
-  document.getElementsByClassName("quickViewContent")[0].classList.remove("popUp");
+if (clearCard) {
+  clearCard.addEventListener("click", () => {
+    clearCart();
+  });
 }
 
+function clearCart() {
+  localStorage.removeItem("cart");
+  console.log("hi");
+  window.location.href = "/#/features";
+}
 
+const qAdd = document.getElementById("qadd");
+const qMinus = document.getElementById("qminus");
 
-function addToCart(title, images, price, category) {
+const qAdds = document.querySelectorAll("#qadd")
+
+// for(let i = 0; i < qAdds.length; i++) {
+//   qAdds[i].addEventListener("click", () => {
+//     const itemId = qAdds[0].getAttribute("data-price");
+//     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//     console.log(itemId);
+//     console.log(cart);
+//     console.log(qAdds[i]);
+    
+//     cart = cart.map(item => {
+//       if (item.price == itemId) {
+//         item.quantity += 1;
+//       }
+//       return item;
+//     });
+
+//     localStorage.setItem("cart", JSON.stringify(cart));
+//     // location.reload();
+//   })
+// }
+if(qAdd){
+  qAdd.addEventListener("click", () => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart.forEach((item) => {
+      item.quantity += 1;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    });
+  });
+}
+
+// document.querySelectorAll("#qadd").forEach(button => {
+//   button.addEventListener("click", () => {
+//     const itemId = button.getAttribute("data-id");
+//     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+//     console.log(itemId);
+//     console.log(cart);
+//     console.log(button);
+    
+//     cart = cart.map(item => {
+//       if (item.id == itemId) {
+//         item.quantity += 1;
+//       }
+//       return item;
+//     });
+
+//     localStorage.setItem("cart", JSON.stringify(cart));
+//     // location.reload();
+//   });
+// });
+
+if(qMinus){
+  qMinus.addEventListener("click", () => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart.forEach((item) => {
+      item.quantity -= 1;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    });
+  });
+}
+
+document.querySelector("#closeQuickViewBTN").addEventListener("click", () => {
+  closeQuickView();
+});
+function closeQuickView() {
+  document
+    .getElementsByClassName("quickViewPopUp")[0]
+    .classList.remove("popUp");
+  document
+    .getElementsByClassName("quickViewContent")[0]
+    .classList.remove("popUp");
+}
+
+function addToCart(title, images, price, category , id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  let existingItem = cart.find(item => item.title === title);
+  let existingItem = cart.find((item) => item.title === title);
 
-  console.log(title , images , price , category);
-  
+  console.log(title, images, price, category , id);
+
   let users = JSON.parse(localStorage.getItem("users")) || [];
   console.log(users);
   console.log(users[0].isLoggedIn);
-  
-  for(let i = 0; i < users.length; i++) {
+
+  for (let i = 0; i < users.length; i++) {
     if (users[i].isLoggedIn) {
       console.log(users[i].username);
       if (existingItem) {
         existingItem.quantity += 1;
       } else {
-        cart.push({ title, images, price, category, quantity: 1 });
+        cart.push({ title, images, price, category, quantity: 1 , id});
       }
       localStorage.setItem("cart", JSON.stringify(cart));
       updateCartCount();
       break;
-    } else{
+    } else {
       window.location.href = "/#/login";
     }
   }
-
-  
 }
 
 function updateCartCount() {
@@ -250,8 +307,5 @@ function updateCartCount() {
   }
 }
 updateCartCount();
-
-
-
 
 export default catFilter();

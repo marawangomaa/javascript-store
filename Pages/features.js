@@ -50,7 +50,7 @@ export default function FeaturesPage(){
             <hr>
             <div class="finalPrice">
                 <div class="shopTotal"></div>
-                <button class="checkOutBtn">CHECK OUT</button>
+                <button onclick="clearCart()" class="checkOutBtn">CHECK OUT</button>
             </div>
         </div>
     </div>
