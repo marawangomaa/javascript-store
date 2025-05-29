@@ -47,8 +47,8 @@ export default function BlogPage() {
                 </p>
               </div>
               </div>
-            `;
-  })}
+            `
+  }).join("")}
           </div>
 
             <div class="sidebar">
@@ -222,5 +222,5 @@ export default function BlogPage() {
           <a href="#" class="pagination-button">2</a>
         </div>
         </div>
-        `;
+        `
 }
