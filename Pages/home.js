@@ -121,6 +121,7 @@ export default function HomePage() {
               data-title=${product.title}
               data-images=${product.images}
               data-price=${product.price}
+              data-id=${product.id}
               >
                     <div class="imginner">
                       <img src=${product.images} alt="product">
@@ -145,6 +146,7 @@ export default function HomePage() {
                     </span>
                       </div>
                     <span class="price">$ ${product.price}</span>
+                    <span class="price">ID: ${product.id}</span>
                     <button class="addToCart">Add to Cart</button>
                   </div>
                 `;
