@@ -89,7 +89,7 @@ export default function ShopPage() {
                     <button class="addToCart">Add to Cart</button>
                   </div>
                 `;
-            })}
+            }).join("")}
         </div>
     </div>
 </div>
